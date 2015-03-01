@@ -1,10 +1,11 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
 # Ignored File
-SpringMVCExample.iml
+spring-mvc-example.iml
 
 # Ignored Folder
 .idea/
+target/
 
 # Package Files #
 *.jar
