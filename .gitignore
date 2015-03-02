@@ -2,6 +2,7 @@
 ### Java template
 # Ignored File
 SpringMVCExample.iml
+spring-mvc-example.iml
 .gitignore
 
 # Ignored Folder
