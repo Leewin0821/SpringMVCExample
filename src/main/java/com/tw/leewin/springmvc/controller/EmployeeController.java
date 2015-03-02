@@ -15,11 +15,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/employee-module")
 public class EmployeeController {
 
-    @Autowired
     EmployeeManager employeeManager;
 
+    @Autowired
+    public EmployeeController(EmployeeManager employeeManager) {
+        this.employeeManager = employeeManager;
+    }
+
     @RequestMapping(value = "/getAllEmployees", method = RequestMethod.GET)
-    public String getAllEmployees(Model model){
+    public String getAllEmployees(Model model) {
         model.addAttribute("employees", employeeManager.getAllEmployees());
         return "employeeListDisplay";
     }
