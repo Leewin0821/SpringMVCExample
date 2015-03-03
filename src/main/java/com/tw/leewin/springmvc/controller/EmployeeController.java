@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/employee-module")
 public class EmployeeController {
 
-    EmployeeManager employeeManager;
+    private EmployeeManager employeeManager;
 
     @Autowired
     public EmployeeController(EmployeeManager employeeManager) {
