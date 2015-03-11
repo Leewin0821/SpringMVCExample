@@ -13,6 +13,16 @@ public class EmployeeVO implements Serializable
     private String firstName;
     private String lastName;
 
+    public EmployeeVO(Integer id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public EmployeeVO() {
+
+    }
+
     public Integer getId() {
         return id;
     }
