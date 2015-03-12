@@ -21,4 +21,16 @@ public class EmployeeManagerImpl implements EmployeeManager {
     public List<EmployeeVO> getAllEmployees() {
         return employeeDAO.getAllEmployees();
     }
+
+    @Override
+    public void addEmployee(EmployeeVO employee) {
+        employeeDAO.addEmployee(employee);
+    }
+
+    @Override
+    public void deleteEmployee(EmployeeVO employee) {
+        employeeDAO.deleteEmployee(employee);
+    }
+
+
 }

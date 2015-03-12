@@ -1,10 +1,14 @@
 package com.tw.leewin.springmvc.model;
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 
 /**
  * Created by lwzhang on 3/1/15.
  */
+
+@Component
 public class EmployeeVO implements Serializable
 {
     private static final long serialVersionUID = 1L;

@@ -35,8 +35,16 @@
 
     <br />
     <form method="post">
-        <input id="searchId" name="userName" type="text">
-        <input id="searchButton" name="search" type="submit" value="Search">
+        <input id="searchId" name="searchId" type="text">
+        <input id="searchButton" name="searchButton" type="submit" value="Search">
+    </form>
+
+    <form>
+        <p>Create New Employee</p>
+        ID : <input id="createNewId" name="newEmployeeId" type="text">
+        First Name : <input id="createNewFirstName" name="createNewFirstName" type="text">
+        Last Name : <input id="createNewLastName" name="createNewLastName" type="text">
+        <input id="createNewEmployeeButton" name="createNewEmployeeButton" type="submit" value="Create New Employee">
     </form>
 
 </body>

@@ -10,4 +10,8 @@ import java.util.List;
 public interface EmployeeManager {
 
     public List<EmployeeVO> getAllEmployees();
+
+    public void addEmployee(EmployeeVO employee);
+
+    public void deleteEmployee(EmployeeVO employee);
 }

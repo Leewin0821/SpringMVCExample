@@ -31,15 +31,15 @@ public class EmployeeController {
     }
 
     @RequestMapping(value = "/getAllEmployees", method = RequestMethod.POST)
-    public ModelAndView searchSpecificEmployee(@RequestParam("userName") String userId){
-        return new ModelAndView("redirect:/employee/" + userId);
+    public ModelAndView searchSpecificEmployee(@RequestParam("searchId") String searchId){
+        return new ModelAndView("redirect:/employee/" + searchId);
     }
 
-    @RequestMapping(value = "/employee/{userId}", method = RequestMethod.GET)
-    public ModelAndView getSpecificEmployee(@PathVariable int userId) {
+    @RequestMapping(value = "/employee/{employeeId}", method = RequestMethod.GET)
+    public ModelAndView getSpecificEmployee(@PathVariable int employeeId) {
         List<EmployeeVO> employeeVOList = employeeManager.getAllEmployees();
         for (EmployeeVO employee : employeeVOList) {
-            if (employee.getId() == userId) {
+            if (employee.getId() == employeeId) {
                 return new ModelAndView("employeeDisplay").addObject("employee", employee);
             }
         }
@@ -49,5 +49,11 @@ public class EmployeeController {
     @RequestMapping(value = "/employee/*", method = RequestMethod.POST)
     public ModelAndView returnToEmployeeListPage() {
         return new ModelAndView("redirect:/getAllEmployees");
+    }
+
+    @RequestMapping(value = "/getAllEmployees", method = RequestMethod.POST)
+    public ModelAndView createNewEmployee(@ModelAttribute("employeeVO") EmployeeVO employee) {
+        employeeManager.addEmployee(employee);
+        return new ModelAndView("employeeListDisplay");
     }
 }

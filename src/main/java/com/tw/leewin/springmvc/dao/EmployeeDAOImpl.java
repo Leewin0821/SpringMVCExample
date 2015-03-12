@@ -13,29 +13,29 @@ import java.util.List;
 
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO {
+    private List<EmployeeVO> employees;
+
+    public EmployeeDAOImpl() {
+        init();
+    }
+
+    private void init() {
+        employees = Lists.newArrayList();
+    }
 
     @Override
     public List<EmployeeVO> getAllEmployees() {
-        List<EmployeeVO> employees = Lists.newArrayList();
-
-        EmployeeVO vo1 = new EmployeeVO();
-        vo1.setId(1);
-        vo1.setFirstName("Lokesh");
-        vo1.setLastName("Gupta");
-        employees.add(vo1);
-
-        EmployeeVO vo2 = new EmployeeVO();
-        vo2.setId(2);
-        vo2.setFirstName("Raj");
-        vo2.setLastName("Kishore");
-        employees.add(vo2);
-
-        EmployeeVO vo3 = new EmployeeVO();
-        vo3.setId(3);
-        vo3.setFirstName("Bay");
-        vo3.setLastName("Max");
-        employees.add(vo3);
-
         return employees;
     }
+
+    @Override
+    public void addEmployee(EmployeeVO employee) {
+        employees.add(employee);
+    }
+
+    @Override
+    public void deleteEmployee(EmployeeVO employee) {
+        employees.remove(employee);
+    }
+
 }
