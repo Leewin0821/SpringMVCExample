@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
@@ -51,9 +52,10 @@ public class EmployeeController {
         return new ModelAndView("redirect:/getAllEmployees");
     }
 
-    @RequestMapping(value = "/getAllEmployees", method = RequestMethod.POST)
-    public ModelAndView createNewEmployee(@ModelAttribute("employeeVO") EmployeeVO employee) {
+    @RequestMapping(value = "/getAllEmployees", params = "createNewEmployee", method = RequestMethod.POST)
+    public ModelAndView createNewEmployee(@ModelAttribute("employee") EmployeeVO employee) {
         employeeManager.addEmployee(employee);
         return new ModelAndView("employeeListDisplay");
     }
+
 }

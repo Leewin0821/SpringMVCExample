@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: lwzhang
@@ -11,6 +12,11 @@
     <title>Index Page Title</title>
 </head>
 <body>
-    <h2>Welcome To Index Page</h2>
+    <h2>Welcome To Spring MVC Test Page</h2>
+
+    <form method="post">
+        <input id="getAllEmployees" name="getAllEmployees" type="submit" value="Get All Employees">
+        <input id="notInTheList" name="notInTheList" type="submit" value="You Are Not In The List?">
+    </form>
 </body>
 </html>

@@ -41,10 +41,10 @@
 
     <form>
         <p>Create New Employee</p>
-        ID : <input id="createNewId" name="newEmployeeId" type="text">
-        First Name : <input id="createNewFirstName" name="createNewFirstName" type="text">
-        Last Name : <input id="createNewLastName" name="createNewLastName" type="text">
-        <input id="createNewEmployeeButton" name="createNewEmployeeButton" type="submit" value="Create New Employee">
+        ID : <input id="createNewId" name="id" type="text">
+        First Name : <input id="createNewFirstName" name="firstName" type="text">
+        Last Name : <input id="createNewLastName" name="lastName" type="text">
+        <input id="createNewEmployeeButton" name="createNewEmployee" type="submit" value="Create New Employee">
     </form>
 
 </body>

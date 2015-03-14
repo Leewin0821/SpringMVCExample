@@ -4,6 +4,8 @@ import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+
 /**
  * Created by lwzhang on 3/1/15.
  */
@@ -18,9 +20,9 @@ public class EmployeeVO implements Serializable
     private String lastName;
 
     public EmployeeVO(Integer id, String firstName, String lastName) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.id = checkNotNull(id);
+        this.firstName = checkNotNull(firstName);
+        this.lastName = checkNotNull(lastName);
     }
 
     public EmployeeVO() {

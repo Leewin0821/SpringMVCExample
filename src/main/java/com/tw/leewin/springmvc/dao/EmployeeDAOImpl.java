@@ -20,7 +20,11 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     }
 
     private void init() {
-        employees = Lists.newArrayList();
+        employees = Lists.newArrayList(
+                new EmployeeVO(1, "Bay", "Max"),
+                new EmployeeVO(2, "Ann", "Su"),
+                new EmployeeVO(3, "Awe", "Some")
+        );
     }
 
     @Override
